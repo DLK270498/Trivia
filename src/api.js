@@ -1,22 +1,18 @@
+const STORAGE_KEY = 'capitals-progress'
+
 export async function loadProgress() {
   try {
-    const res = await fetch('/api/progress')
-    if (!res.ok) return {}
-    return await res.json()
+    const raw = localStorage.getItem(STORAGE_KEY)
+    return raw ? JSON.parse(raw) : {}
   } catch {
     return {}
   }
 }
 
-let saveTimer = null
-
 export function saveProgress(progress) {
-  clearTimeout(saveTimer)
-  saveTimer = setTimeout(() => {
-    fetch('/api/progress', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(progress),
-    }).catch(() => {})
-  }, 300)
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
+  } catch {
+    // localStorage full or unavailable (e.g. private browsing) - progress just won't persist.
+  }
 }

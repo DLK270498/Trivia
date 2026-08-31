@@ -1,6 +1,6 @@
 # Hauptstädte lernen
 
-Eine kleine private Lern-App für die Hauptstädte der Welt (~197 Länder inkl. Vatikanstadt und Palästina), mit interessanten Facts und einem Leitner-Karteikasten-System für regelmäßige Wiederholung.
+Eine kleine private Lern-App für die Hauptstädte der Welt (~197 Länder inkl. Vatikanstadt und Palästina), mit interessanten Facts und einem Leitner-Karteikasten-System für regelmäßige Wiederholung. Als installierbare Web-App (PWA) fürs Handy nutzbar.
 
 ## So funktioniert's
 
@@ -10,9 +10,29 @@ Eine kleine private Lern-App für die Hauptstädte der Welt (~197 Länder inkl. 
    - **Gewusst** → die Karte wandert eine Box im Leitner-System nach oben und wird erst später wieder fällig (1, 3, 7, 14 Tage).
    - **Nicht gewusst** → die Karte fällt zurück auf Box 1 und taucht **innerhalb derselben Runde bald wieder auf**, außerdem am nächsten Tag erneut.
 
-Dein Fortschritt wird in `data/progress.json` gespeichert (lokale Datei, kein Server außer deinem eigenen Rechner).
+Dein Fortschritt wird direkt im Browser gespeichert (`localStorage`) – bleibt also auf dem Gerät/Browser, mit dem du lernst, und braucht keinen Server.
 
-## Starten
+## Auf dem Handy nutzen (als Web-App)
+
+Die App wird automatisch per GitHub Actions auf **GitHub Pages** veröffentlicht, sobald auf den Branch `claude/capitals-learning-app-afp8m7` gepusht wird.
+
+**Einmaliges Setup (im GitHub-Repo):**
+
+1. Auf GitHub zu *Settings → Pages* gehen.
+2. Unter "Build and deployment" → "Source" auf **GitHub Actions** stellen.
+3. Danach läuft der Workflow automatisch bei jedem Push und veröffentlicht die App unter:
+   `https://dlk270498.github.io/Trivia/`
+
+**Auf dem Handy installieren:**
+
+- **iPhone (Safari):** Seite öffnen → Teilen-Symbol → "Zum Home-Bildschirm".
+- **Android (Chrome):** Seite öffnen → Menü (⋮) → "App installieren" bzw. "Zum Startbildschirm hinzufügen".
+
+Die App öffnet sich danach wie eine normale App im Vollbild (ohne Browserleiste) und funktioniert dank Service Worker auch offline, sobald sie einmal geladen wurde.
+
+⚠️ Da der Fortschritt in `localStorage` liegt, zählt jedes Gerät/jeder Browser separat – Handy und PC teilen sich den Lernstand nicht automatisch.
+
+## Lokal entwickeln
 
 ```bash
 npm install
@@ -21,7 +41,12 @@ npm run dev
 
 Dann die angezeigte lokale URL (z. B. http://localhost:5173) im Browser öffnen.
 
-Die App läuft nur im Dev-Modus (`npm run dev`), da die Fortschritts-Speicherung über ein Vite-Plugin realisiert ist, das nur im Dev-Server aktiv ist – für eine rein private, lokal genutzte App ist das ausreichend.
+Zum Testen des Produktions-Builds (inkl. PWA/Service Worker) lokal:
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Daten erweitern
 
