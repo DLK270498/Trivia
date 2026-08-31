@@ -1,178 +1,340 @@
 :root {
-  color-scheme: light dark;
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+
+  --bg: #050810;
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --text: rgba(255, 255, 255, 0.94);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-tertiary: rgba(255, 255, 255, 0.38);
+  --blue: #0a84ff;
+  --green: #30d158;
+  --red: #ff453a;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
   margin: 0;
-  background: #0f172a;
-  color: #f1f5f9;
-  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  overscroll-behavior: none;
 }
 
 .app {
-  min-height: 100vh;
+  position: relative;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  isolation: isolate;
 }
+
+/* ---------- Background ---------- */
+
+.bg-decor {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.bg-blob-1 {
+  width: 60vmax;
+  height: 60vmax;
+  top: -20vmax;
+  left: -15vmax;
+  background: radial-gradient(circle, #2563eb, transparent 70%);
+  animation: float-1 22s ease-in-out infinite;
+}
+
+.bg-blob-2 {
+  width: 55vmax;
+  height: 55vmax;
+  top: -10vmax;
+  right: -25vmax;
+  background: radial-gradient(circle, #7c3aed, transparent 70%);
+  animation: float-2 26s ease-in-out infinite;
+}
+
+.bg-blob-3 {
+  width: 50vmax;
+  height: 50vmax;
+  bottom: -25vmax;
+  left: 10vmax;
+  background: radial-gradient(circle, #14b8a6, transparent 70%);
+  animation: float-3 30s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(4vmax, 3vmax); }
+}
+@keyframes float-2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-3vmax, 4vmax); }
+}
+@keyframes float-3 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(3vmax, -3vmax); }
+}
+
+.bg-globe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(160vw, 1400px);
+  height: min(160vw, 1400px);
+  transform: translate(-50%, -50%);
+  opacity: 0.05;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-blob { animation: none; }
+}
+
+/* ---------- Stats bar ---------- */
 
 .stats-bar {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   justify-content: center;
-  padding: 0.9rem 1rem;
-  background: #1e293b;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #334155;
+  gap: 0.25rem;
+  padding: calc(var(--safe-top) + 0.85rem) 1rem 0.85rem;
+  flex-wrap: wrap;
 }
 
-.stat-mastered { color: #4ade80; }
-.stat-learning { color: #facc15; }
-.stat-fresh { color: #60a5fa; }
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 4.5rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 14px;
+}
+
+.stat-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.1rem;
+}
+
+.stat-mastered .stat-value { color: var(--green); }
+.stat-learning .stat-value { color: #ffd60a; }
+.stat-fresh .stat-value { color: var(--blue); }
+
+/* ---------- Card ---------- */
 
 .card-area {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1.1rem calc(1rem + var(--safe-bottom));
 }
 
 .card {
-  background: #1e293b;
-  border-radius: 16px;
-  padding: 2.5rem 2rem;
-  max-width: 480px;
+  background: var(--card-bg);
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  padding: 2.3rem 1.8rem;
+  max-width: 440px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  animation: card-in 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .region-tag {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #94a3b8;
-  background: #334155;
-  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
 }
 
 .card h1 {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.6rem;
   font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .prompt {
-  color: #cbd5e1;
-  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
 }
 
 .guess-input {
   width: 100%;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #475569;
-  background: #0f172a;
-  color: #f1f5f9;
-  font-size: 1rem;
-  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 1.1rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.guess-input::placeholder {
+  color: var(--text-tertiary);
 }
 
 .guess-input:focus {
-  outline: 2px solid #60a5fa;
+  outline: none;
+  border-color: var(--blue);
+  background: rgba(10, 132, 255, 0.08);
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
+  border-radius: 14px;
   font-size: 1rem;
-  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  padding: 0.85rem 1.4rem;
+  transition: transform 0.12s ease, opacity 0.15s ease, background 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.97);
 }
 
 .primary {
-  background: #3b82f6;
+  background: var(--blue);
   color: white;
   width: 100%;
 }
 
 .primary:hover {
-  background: #2563eb;
+  background: #339cff;
 }
 
-.capital-answer {
-  font-size: 1.8rem;
+.primary:disabled {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-tertiary);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.override-link {
+  background: transparent;
+  color: var(--text-tertiary);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.7rem 0.5rem 0;
+  width: 100%;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.override-link:hover {
+  color: var(--text-secondary);
+}
+
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: #4ade80;
-  margin: 0 0 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.result-badge.is-correct {
+  background: rgba(48, 209, 88, 0.16);
+  color: var(--green);
+}
+
+.result-badge.is-wrong {
+  background: rgba(255, 69, 58, 0.16);
+  color: var(--red);
 }
 
 .your-guess {
-  color: #94a3b8;
-  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.3rem;
+  font-size: 0.9rem;
+}
+
+.capital-answer {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.3rem;
 }
 
 .facts {
   text-align: left;
-  padding-left: 1.2rem;
-  margin: 0 0 1.5rem;
-  color: #e2e8f0;
-  line-height: 1.5;
+  padding-left: 1.1rem;
+  margin: 0 0 1.6rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  font-size: 0.95rem;
 }
 
 .facts li {
-  margin-bottom: 0.5rem;
-}
-
-.answer-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.answer-buttons button {
-  flex: 1;
-}
-
-.yes {
-  background: #16a34a;
-  color: white;
-}
-
-.yes:hover {
-  background: #15803d;
-}
-
-.no {
-  background: #dc2626;
-  color: white;
-}
-
-.no:hover {
-  background: #b91c1c;
+  margin-bottom: 0.55rem;
 }
 
 .center-message {
   text-align: center;
-  padding: 3rem 1rem;
-  color: #cbd5e1;
+  color: var(--text-secondary);
+  max-width: 380px;
 }
 
 .center-message h2 {
-  color: #f1f5f9;
+  color: var(--text);
+  margin-top: 0;
 }
 
 .queue-info {
   text-align: center;
-  padding: 0.75rem;
-  color: #64748b;
-  font-size: 0.85rem;
+  padding: 0.75rem 1rem calc(0.75rem + var(--safe-bottom));
+  color: var(--text-tertiary);
+  font-size: 0.82rem;
 }

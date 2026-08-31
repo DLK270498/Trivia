@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import capitals from './data/capitals.json'
 import { applyAnswer, isDue, isMastered, isNew, makeInitialEntry } from './leitner.js'
 import { loadProgress, saveProgress } from './api.js'
+import { isFuzzyMatch } from './match.js'
+import GlobeBackground from './components/GlobeBackground.jsx'
 
 const NEW_CARDS_PER_SESSION = 20
 const REQUEUE_OFFSET = 5
@@ -38,6 +40,7 @@ export default function App() {
   const [queue, setQueue] = useState([])
   const [stage, setStage] = useState('ask') // 'ask' | 'reveal'
   const [guess, setGuess] = useState('')
+  const [wasCorrect, setWasCorrect] = useState(false)
   const [sessionDone, setSessionDone] = useState(0)
   const progressRef = useRef(progress)
   progressRef.current = progress
@@ -64,36 +67,45 @@ export default function App() {
   }, [progress])
 
   if (!progress) {
-    return <div className="center-message">Lade Fortschritt…</div>
+    return (
+      <div className="app">
+        <GlobeBackground />
+        <div className="center-message">Lade Fortschritt…</div>
+      </div>
+    )
   }
 
   const currentIndex = queue[0]
   const current = currentIndex !== undefined ? capitals[currentIndex] : null
+  const canSubmit = guess.trim().length > 0
 
   function persist(nextProgress) {
     setProgress(nextProgress)
     saveProgress(nextProgress)
   }
 
-  function handleReveal() {
+  function handleCheck() {
+    if (!canSubmit) return
+    const correct = isFuzzyMatch(guess, current.capital, current.aliases || [])
+    setWasCorrect(correct)
     setStage('reveal')
   }
 
-  function handleAnswer(knewIt) {
+  function handleContinue(finalCorrect) {
     const country = current.country
     const entry = progressRef.current[country] || makeInitialEntry()
-    const updated = applyAnswer(entry, knewIt)
+    const updated = applyAnswer(entry, finalCorrect)
     persist({ ...progressRef.current, [country]: updated })
 
     const rest = queue.slice(1)
-    if (knewIt) {
+    if (finalCorrect) {
       setQueue(rest)
     } else {
       const insertAt = Math.min(rest.length, REQUEUE_OFFSET)
       const nextQueue = [...rest.slice(0, insertAt), currentIndex, ...rest.slice(insertAt)]
       setQueue(nextQueue)
     }
-    setSessionDone((n) => n + (knewIt ? 1 : 0))
+    setSessionDone((n) => n + (finalCorrect ? 1 : 0))
     setStage('ask')
     setGuess('')
   }
@@ -107,22 +119,36 @@ export default function App() {
 
   return (
     <div className="app">
+      <GlobeBackground />
+
       <header className="stats-bar">
-        <span>🌍 {stats.total} Länder</span>
-        <span className="stat-mastered">✅ {stats.mastered} gelernt</span>
-        <span className="stat-learning">📚 {stats.learning} in Übung</span>
-        <span className="stat-fresh">🆕 {stats.fresh} neu</span>
+        <div className="stat">
+          <span className="stat-value">{stats.total}</span>
+          <span className="stat-label">Länder</span>
+        </div>
+        <div className="stat stat-mastered">
+          <span className="stat-value">{stats.mastered}</span>
+          <span className="stat-label">Gelernt</span>
+        </div>
+        <div className="stat stat-learning">
+          <span className="stat-value">{stats.learning}</span>
+          <span className="stat-label">In Übung</span>
+        </div>
+        <div className="stat stat-fresh">
+          <span className="stat-value">{stats.fresh}</span>
+          <span className="stat-label">Neu</span>
+        </div>
       </header>
 
       <main className="card-area">
         {!current ? (
-          <div className="center-message">
-            <h2>Für jetzt fertig! 🎉</h2>
+          <div className="card center-message">
+            <h2>Für jetzt fertig 🎉</h2>
             <p>Aktuell ist keine Hauptstadt fällig. Schau später wieder vorbei, oder starte eine neue Runde.</p>
             <button className="primary" onClick={startNewSession}>Neue Runde starten</button>
           </div>
         ) : (
-          <div className="card">
+          <div className="card" key={currentIndex}>
             <div className="region-tag">{current.region}</div>
             <h1>{current.country}</h1>
 
@@ -134,30 +160,39 @@ export default function App() {
                   type="text"
                   value={guess}
                   onChange={(e) => setGuess(e.target.value)}
-                  placeholder="Deine Antwort (optional)"
-                  onKeyDown={(e) => e.key === 'Enter' && handleReveal()}
+                  placeholder="Deine Antwort"
+                  onKeyDown={(e) => e.key === 'Enter' && handleCheck()}
                   autoFocus
+                  autoCapitalize="words"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  spellCheck="false"
                 />
-                <button className="primary" onClick={handleReveal}>Antwort zeigen</button>
+                <button className="primary" onClick={handleCheck} disabled={!canSubmit}>
+                  Antwort prüfen
+                </button>
               </>
             )}
 
             {stage === 'reveal' && (
               <>
+                <div className={`result-badge ${wasCorrect ? 'is-correct' : 'is-wrong'}`}>
+                  {wasCorrect ? '✓ Richtig' : '✕ Nicht ganz'}
+                </div>
+                <p className="your-guess">Deine Antwort: <em>{guess}</em></p>
                 <p className="capital-answer">{current.capital}</p>
-                {guess && (
-                  <p className="your-guess">Deine Antwort: <em>{guess}</em></p>
-                )}
                 <ul className="facts">
                   {current.facts.map((fact, i) => (
                     <li key={i}>{fact}</li>
                   ))}
                 </ul>
-                <p className="prompt">Wusstest du es?</p>
-                <div className="answer-buttons">
-                  <button className="no" onClick={() => handleAnswer(false)}>❌ Nicht gewusst</button>
-                  <button className="yes" onClick={() => handleAnswer(true)}>✅ Gewusst</button>
-                </div>
+
+                <button className="primary" onClick={() => handleContinue(wasCorrect)}>
+                  Weiter
+                </button>
+                <button className="override-link" onClick={() => setWasCorrect((v) => !v)}>
+                  {wasCorrect ? 'War eigentlich falsch?' : 'War eigentlich richtig?'}
+                </button>
               </>
             )}
           </div>
