@@ -1,0 +1,178 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  background: #1e293b;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #334155;
+}
+
+.stat-mastered { color: #4ade80; }
+.stat-learning { color: #facc15; }
+.stat-fresh { color: #60a5fa; }
+
+.card-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.region-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  background: #334155;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.card h1 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+}
+
+.prompt {
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.guess-input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.guess-input:focus {
+  outline: 2px solid #60a5fa;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+}
+
+.primary {
+  background: #3b82f6;
+  color: white;
+  width: 100%;
+}
+
+.primary:hover {
+  background: #2563eb;
+}
+
+.capital-answer {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4ade80;
+  margin: 0 0 0.5rem;
+}
+
+.your-guess {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.facts {
+  text-align: left;
+  padding-left: 1.2rem;
+  margin: 0 0 1.5rem;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.facts li {
+  margin-bottom: 0.5rem;
+}
+
+.answer-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.answer-buttons button {
+  flex: 1;
+}
+
+.yes {
+  background: #16a34a;
+  color: white;
+}
+
+.yes:hover {
+  background: #15803d;
+}
+
+.no {
+  background: #dc2626;
+  color: white;
+}
+
+.no:hover {
+  background: #b91c1c;
+}
+
+.center-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #cbd5e1;
+}
+
+.center-message h2 {
+  color: #f1f5f9;
+}
+
+.queue-info {
+  text-align: center;
+  padding: 0.75rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
