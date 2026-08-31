@@ -91,6 +91,11 @@ export default function App() {
     setStage('reveal')
   }
 
+  function handleDontKnow() {
+    setWasCorrect(false)
+    setStage('reveal')
+  }
+
   function handleContinue(finalCorrect) {
     const country = current.country
     const entry = progressRef.current[country] || makeInitialEntry()
@@ -171,6 +176,9 @@ export default function App() {
                 <button className="primary" onClick={handleCheck} disabled={!canSubmit}>
                   Antwort prüfen
                 </button>
+                <button className="secondary" onClick={handleDontKnow}>
+                  Weiß ich nicht
+                </button>
               </>
             )}
 
@@ -179,7 +187,11 @@ export default function App() {
                 <div className={`result-badge ${wasCorrect ? 'is-correct' : 'is-wrong'}`}>
                   {wasCorrect ? '✓ Richtig' : '✕ Nicht ganz'}
                 </div>
-                <p className="your-guess">Deine Antwort: <em>{guess}</em></p>
+                {guess.trim() ? (
+                  <p className="your-guess">Deine Antwort: <em>{guess}</em></p>
+                ) : (
+                  <p className="your-guess">Direkt zur Antwort gesprungen</p>
+                )}
                 <p className="capital-answer">{current.capital}</p>
                 <ul className="facts">
                   {current.facts.map((fact, i) => (

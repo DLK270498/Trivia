@@ -258,6 +258,19 @@ button:active {
   transform: none;
 }
 
+.secondary {
+  background: transparent;
+  color: var(--text-secondary);
+  width: 100%;
+  margin-top: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
 .override-link {
   background: transparent;
   color: var(--text-tertiary);
