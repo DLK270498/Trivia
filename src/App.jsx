@@ -34,12 +34,7 @@ export default function App() {
           inputPlaceholder="Deine Antwort"
           emptyTitle="Für jetzt fertig 🎉"
           emptyText="Aktuell ist keine Hauptstadt fällig. Schau später wieder vorbei, oder starte eine neue Runde."
-          renderQuestion={(item) => (
-            <>
-              <div className="region-tag">{item.region}</div>
-              <h1>{item.country}</h1>
-            </>
-          )}
+          renderQuestion={(item) => <h1>{item.country}</h1>}
           renderRevealAnswer={(item) => (
             <p className="capital-answer">{item.capital}</p>
           )}
@@ -60,12 +55,7 @@ export default function App() {
           inputPlaceholder="Land eingeben"
           emptyTitle="Für jetzt fertig 🎉"
           emptyText="Aktuell ist keine Flagge fällig. Schau später wieder vorbei, oder starte eine neue Runde."
-          renderQuestion={(item) => (
-            <>
-              <div className="region-tag">{item.region}</div>
-              <div className="flag-display">{flagEmoji(item.code)}</div>
-            </>
-          )}
+          renderQuestion={(item) => <div className="flag-display">{flagEmoji(item.code)}</div>}
           renderRevealAnswer={(item) => (
             <p className="capital-answer">{item.country}</p>
           )}

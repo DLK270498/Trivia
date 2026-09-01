@@ -7,7 +7,8 @@
       "Tirana wurde erst 1920 zur Hauptstadt Albaniens erklärt.",
       "Die Innenstadt ist für ihre bunt bemalten Hausfassaden bekannt, ein Projekt des früheren Künstler-Bürgermeisters Edi Rama."
     ],
-    "code": "AL"
+    "code": "AL",
+    "difficulty": 3
   },
   {
     "country": "Andorra",
@@ -17,7 +18,8 @@
       "Mit rund 1.023 Metern Höhe ist es die höchstgelegene Hauptstadt Europas.",
       "Andorra la Vella hat keinen Flughafen und keinen Bahnhof."
     ],
-    "code": "AD"
+    "code": "AD",
+    "difficulty": 3
   },
   {
     "country": "Belgien",
@@ -31,7 +33,8 @@
       "Brussels",
       "Bruxelles"
     ],
-    "code": "BE"
+    "code": "BE",
+    "difficulty": 1
   },
   {
     "country": "Bosnien und Herzegowina",
@@ -41,7 +44,8 @@
       "Hier löste 1914 das Attentat auf Erzherzog Franz Ferdinand den Ersten Weltkrieg aus.",
       "1984 fanden in Sarajevo die Olympischen Winterspiele statt."
     ],
-    "code": "BA"
+    "code": "BA",
+    "difficulty": 3
   },
   {
     "country": "Bulgarien",
@@ -51,7 +55,8 @@
       "Sofia liegt am Fuß des Berges Witoscha und ist eine der ältesten Städte Europas.",
       "Die Stadt hieß in der Antike Serdica."
     ],
-    "code": "BG"
+    "code": "BG",
+    "difficulty": 2
   },
   {
     "country": "Dänemark",
@@ -64,7 +69,8 @@
     "aliases": [
       "Copenhagen"
     ],
-    "code": "DK"
+    "code": "DK",
+    "difficulty": 1
   },
   {
     "country": "Deutschland",
@@ -74,7 +80,8 @@
       "Berlin war von 1961 bis 1989 durch die Berliner Mauer geteilt.",
       "Die Stadt hat mehr Brücken als Venedig."
     ],
-    "code": "DE"
+    "code": "DE",
+    "difficulty": 1
   },
   {
     "country": "Estland",
@@ -84,7 +91,8 @@
       "Die mittelalterliche Altstadt von Tallinn gehört zum UNESCO-Weltkulturerbe.",
       "Estland gilt als digitaler Vorreiter – Skype wurde hier entwickelt."
     ],
-    "code": "EE"
+    "code": "EE",
+    "difficulty": 2
   },
   {
     "country": "Finnland",
@@ -94,7 +102,8 @@
       "Helsinki wird wegen seiner klassizistischen Architektur manchmal 'Tochter der Ostsee' genannt.",
       "Die Stadt hat eine der größten Saunadichten der Welt."
     ],
-    "code": "FI"
+    "code": "FI",
+    "difficulty": 1
   },
   {
     "country": "Frankreich",
@@ -104,7 +113,8 @@
       "Der Eiffelturm wurde 1889 als temporäres Bauwerk für die Weltausstellung errichtet.",
       "Paris ist mit rund 105 km² eine der kompaktesten Millionenstädte Europas."
     ],
-    "code": "FR"
+    "code": "FR",
+    "difficulty": 1
   },
   {
     "country": "Griechenland",
@@ -117,7 +127,8 @@
     "aliases": [
       "Athens"
     ],
-    "code": "GR"
+    "code": "GR",
+    "difficulty": 1
   },
   {
     "country": "Irland",
@@ -127,7 +138,8 @@
       "Der Name Dublin stammt vom irischen 'Dubh Linn' – 'schwarzer Teich'.",
       "Die Guinness-Brauerei besteht dort seit 1759 mit einem 9.000-Jahre-Pachtvertrag."
     ],
-    "code": "IE"
+    "code": "IE",
+    "difficulty": 1
   },
   {
     "country": "Island",
@@ -137,7 +149,8 @@
       "Reykjavík bedeutet 'Rauchbucht', benannt nach den aufsteigenden Dämpfen heißer Quellen.",
       "Es ist die nördlichste Hauptstadt eines souveränen Staates."
     ],
-    "code": "IS"
+    "code": "IS",
+    "difficulty": 1
   },
   {
     "country": "Italien",
@@ -151,7 +164,8 @@
       "Rome",
       "Roma"
     ],
-    "code": "IT"
+    "code": "IT",
+    "difficulty": 1
   },
   {
     "country": "Kosovo",
@@ -165,7 +179,8 @@
       "Prishtina",
       "Prishtine"
     ],
-    "code": "XK"
+    "code": "XK",
+    "difficulty": 4
   },
   {
     "country": "Kroatien",
@@ -175,7 +190,8 @@
       "Zagreb besteht aus einer Ober- und einer Unterstadt, verbunden durch die kürzeste Standseilbahn der Welt.",
       "Die Kathedrale prägt mit ihren Türmen die Skyline der Stadt."
     ],
-    "code": "HR"
+    "code": "HR",
+    "difficulty": 2
   },
   {
     "country": "Lettland",
@@ -185,7 +201,8 @@
       "Rigas Altstadt ist bekannt für ihre zahlreichen Jugendstil-Gebäude.",
       "Riga war einst Mitglied der Hanse."
     ],
-    "code": "LV"
+    "code": "LV",
+    "difficulty": 2
   },
   {
     "country": "Liechtenstein",
@@ -195,7 +212,8 @@
       "Über Vaduz thront das Schloss Vaduz, die Residenz des Fürsten.",
       "Vaduz hat keinen eigenen Bahnhof, obwohl es Hauptstadt ist."
     ],
-    "code": "LI"
+    "code": "LI",
+    "difficulty": 3
   },
   {
     "country": "Litauen",
@@ -205,7 +223,8 @@
       "Die Altstadt von Vilnius ist eine der größten mittelalterlichen Altstädte Osteuropas.",
       "Das Stadtviertel Užupis rief sich selbst scherzhaft zur unabhängigen Republik aus."
     ],
-    "code": "LT"
+    "code": "LT",
+    "difficulty": 2
   },
   {
     "country": "Luxemburg",
@@ -220,7 +239,8 @@
       "Luxembourg",
       "Luxembourg City"
     ],
-    "code": "LU"
+    "code": "LU",
+    "difficulty": 2
   },
   {
     "country": "Malta",
@@ -230,7 +250,8 @@
       "Valletta ist mit rund 0,8 km² eine der kleinsten Hauptstädte der EU.",
       "Die gesamte Stadt wurde von den Malteserrittern im 16. Jahrhundert geplant und gehört zum Weltkulturerbe."
     ],
-    "code": "MT"
+    "code": "MT",
+    "difficulty": 2
   },
   {
     "country": "Moldau",
@@ -244,7 +265,8 @@
       "Chisinau",
       "Kischinau"
     ],
-    "code": "MD"
+    "code": "MD",
+    "difficulty": 3
   },
   {
     "country": "Monaco",
@@ -254,7 +276,8 @@
       "Der Stadtstaat Monaco ist zugleich Land und Hauptstadt in einem.",
       "Monaco ist nach dem Vatikan der zweitkleinste Staat der Welt."
     ],
-    "code": "MC"
+    "code": "MC",
+    "difficulty": 2
   },
   {
     "country": "Montenegro",
@@ -264,7 +287,8 @@
       "Podgorica hieß von 1946 bis 1992 Titograd, nach Josip Broz Tito.",
       "Die Stadt liegt am Zusammenfluss der Flüsse Ribnica und Morača."
     ],
-    "code": "ME"
+    "code": "ME",
+    "difficulty": 3
   },
   {
     "country": "Niederlande",
@@ -274,7 +298,8 @@
       "Amsterdam hat mehr Grachten als Venedig – über 100 Kilometer Wasserwege.",
       "Die Regierung sitzt allerdings nicht in Amsterdam, sondern in Den Haag."
     ],
-    "code": "NL"
+    "code": "NL",
+    "difficulty": 1
   },
   {
     "country": "Nordmazedonien",
@@ -288,7 +313,8 @@
     "countryAliases": [
       "Mazedonien",
       "Macedonia"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "Norwegen",
@@ -298,7 +324,8 @@
       "In Oslo wird jährlich der Friedensnobelpreis verliehen.",
       "Die Stadt war früher unter dem Namen Christiania bekannt."
     ],
-    "code": "NO"
+    "code": "NO",
+    "difficulty": 1
   },
   {
     "country": "Österreich",
@@ -311,7 +338,8 @@
     "aliases": [
       "Vienna"
     ],
-    "code": "AT"
+    "code": "AT",
+    "difficulty": 1
   },
   {
     "country": "Polen",
@@ -324,7 +352,8 @@
     "aliases": [
       "Warsaw"
     ],
-    "code": "PL"
+    "code": "PL",
+    "difficulty": 1
   },
   {
     "country": "Portugal",
@@ -338,7 +367,8 @@
       "Lisbon",
       "Lisboa"
     ],
-    "code": "PT"
+    "code": "PT",
+    "difficulty": 1
   },
   {
     "country": "Rumänien",
@@ -351,7 +381,8 @@
     "aliases": [
       "Bucharest"
     ],
-    "code": "RO"
+    "code": "RO",
+    "difficulty": 2
   },
   {
     "country": "Russland",
@@ -368,7 +399,8 @@
     "countryAliases": [
       "Russian Federation",
       "Russische Föderation"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "San Marino",
@@ -378,7 +410,8 @@
       "San Marino gilt als eine der ältesten noch bestehenden Republiken der Welt.",
       "Die Stadt liegt auf dem Berg Monte Titano."
     ],
-    "code": "SM"
+    "code": "SM",
+    "difficulty": 3
   },
   {
     "country": "Schweden",
@@ -388,7 +421,8 @@
       "Stockholm erstreckt sich über 14 Inseln, verbunden durch mehr als 50 Brücken.",
       "Jedes Jahr im Dezember wird hier der Nobelpreis verliehen."
     ],
-    "code": "SE"
+    "code": "SE",
+    "difficulty": 1
   },
   {
     "country": "Schweiz",
@@ -401,7 +435,8 @@
     "aliases": [
       "Berne"
     ],
-    "code": "CH"
+    "code": "CH",
+    "difficulty": 1
   },
   {
     "country": "Serbien",
@@ -414,7 +449,8 @@
     "aliases": [
       "Belgrade"
     ],
-    "code": "RS"
+    "code": "RS",
+    "difficulty": 2
   },
   {
     "country": "Slowakei",
@@ -424,7 +460,8 @@
       "Bratislava ist die einzige Hauptstadt der Welt, die an zwei Staaten grenzt (Österreich und Ungarn).",
       "Über der Stadt thront die Burg Bratislava."
     ],
-    "code": "SK"
+    "code": "SK",
+    "difficulty": 2
   },
   {
     "country": "Slowenien",
@@ -434,7 +471,8 @@
       "Ljubljana gilt als eine der grünsten Hauptstädte Europas und war 2016 Europäische Grüne Hauptstadt.",
       "Die Drachenbrücke mit ihren vier Drachenstatuen ist das Wahrzeichen der Stadt."
     ],
-    "code": "SI"
+    "code": "SI",
+    "difficulty": 2
   },
   {
     "country": "Spanien",
@@ -444,7 +482,8 @@
       "Mit rund 650 Metern über dem Meeresspiegel ist Madrid eine der höchstgelegenen Hauptstädte Europas.",
       "Der Königspalast ist einer der größten in Europa noch genutzten Paläste."
     ],
-    "code": "ES"
+    "code": "ES",
+    "difficulty": 1
   },
   {
     "country": "Tschechien",
@@ -461,7 +500,8 @@
     "countryAliases": [
       "Czech Republic",
       "Tschechische Republik"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "Ukraine",
@@ -475,7 +515,8 @@
       "Kiev",
       "Kyiv"
     ],
-    "code": "UA"
+    "code": "UA",
+    "difficulty": 1
   },
   {
     "country": "Ungarn",
@@ -485,7 +526,8 @@
       "Budapest entstand 1873 durch den Zusammenschluss der Städte Buda, Pest und Óbuda.",
       "Die Stadt ist berühmt für ihre historischen Thermalbäder."
     ],
-    "code": "HU"
+    "code": "HU",
+    "difficulty": 1
   },
   {
     "country": "Vatikanstadt",
@@ -500,7 +542,8 @@
       "Vatican",
       "Vatican City"
     ],
-    "code": "VA"
+    "code": "VA",
+    "difficulty": 2
   },
   {
     "country": "Vereinigtes Königreich",
@@ -517,7 +560,8 @@
       "England",
       "Great Britain",
       "Britain"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "Weißrussland",
@@ -530,7 +574,8 @@
     "code": "BY",
     "countryAliases": [
       "Belarus"
-    ]
+    ],
+    "difficulty": 2
   },
   {
     "country": "Zypern",
@@ -543,7 +588,8 @@
     "aliases": [
       "Nicosia"
     ],
-    "code": "CY"
+    "code": "CY",
+    "difficulty": 2
   },
   {
     "country": "Afghanistan",
@@ -553,7 +599,8 @@
       "Kabul liegt auf rund 1.800 Metern Höhe in einem Talkessel des Hindukusch.",
       "Die Stadt liegt an einer historischen Route der Seidenstraße."
     ],
-    "code": "AF"
+    "code": "AF",
+    "difficulty": 2
   },
   {
     "country": "Armenien",
@@ -566,7 +613,8 @@
     "aliases": [
       "Yerevan"
     ],
-    "code": "AM"
+    "code": "AM",
+    "difficulty": 3
   },
   {
     "country": "Aserbaidschan",
@@ -576,7 +624,8 @@
       "Baku liegt unterhalb des Meeresspiegels am Kaspischen Meer.",
       "Die Flame Towers prägen mit ihrer flammenförmigen Architektur die moderne Skyline."
     ],
-    "code": "AZ"
+    "code": "AZ",
+    "difficulty": 3
   },
   {
     "country": "Bahrain",
@@ -586,7 +635,8 @@
       "Manama ist eines der ältesten Handelszentren am Persischen Golf.",
       "Der Bahrain World Trade Center integriert Windturbinen zwischen seinen Zwillingstürmen."
     ],
-    "code": "BH"
+    "code": "BH",
+    "difficulty": 3
   },
   {
     "country": "Bangladesch",
@@ -596,7 +646,8 @@
       "Dhaka gilt als 'Rikscha-Hauptstadt der Welt' mit hunderttausenden Fahrrad-Rikschas.",
       "Die Stadt liegt im Flussdelta von Ganges und Brahmaputra."
     ],
-    "code": "BD"
+    "code": "BD",
+    "difficulty": 2
   },
   {
     "country": "Bhutan",
@@ -606,7 +657,8 @@
       "Thimphu ist eine der wenigen Hauptstädte der Welt ohne Ampeln.",
       "Bhutan misst sein Wohlstand offiziell auch am 'Bruttonationalglück'."
     ],
-    "code": "BT"
+    "code": "BT",
+    "difficulty": 3
   },
   {
     "country": "Brunei",
@@ -616,7 +668,8 @@
       "Die Moschee Omar Ali Saifuddien ist das architektonische Wahrzeichen der Stadt.",
       "Brunei liegt auf der Insel Borneo und ist reich an Erdöl- und Erdgasvorkommen."
     ],
-    "code": "BN"
+    "code": "BN",
+    "difficulty": 3
   },
   {
     "country": "China",
@@ -629,7 +682,8 @@
     "aliases": [
       "Beijing"
     ],
-    "code": "CN"
+    "code": "CN",
+    "difficulty": 1
   },
   {
     "country": "Georgien",
@@ -642,7 +696,8 @@
     "aliases": [
       "Tbilisi"
     ],
-    "code": "GE"
+    "code": "GE",
+    "difficulty": 3
   },
   {
     "country": "Indien",
@@ -655,7 +710,8 @@
     "aliases": [
       "New Delhi"
     ],
-    "code": "IN"
+    "code": "IN",
+    "difficulty": 1
   },
   {
     "country": "Indonesien",
@@ -665,7 +721,8 @@
       "Jakarta sinkt jedes Jahr um mehrere Zentimeter, weshalb Indonesien eine neue Hauptstadt namens Nusantara auf Borneo plant.",
       "Mit dem Großraum gehört Jakarta zu den bevölkerungsreichsten Ballungsräumen der Welt."
     ],
-    "code": "ID"
+    "code": "ID",
+    "difficulty": 1
   },
   {
     "country": "Irak",
@@ -678,7 +735,8 @@
     "aliases": [
       "Baghdad"
     ],
-    "code": "IQ"
+    "code": "IQ",
+    "difficulty": 1
   },
   {
     "country": "Iran",
@@ -691,7 +749,8 @@
     "aliases": [
       "Tehran"
     ],
-    "code": "IR"
+    "code": "IR",
+    "difficulty": 1
   },
   {
     "country": "Israel",
@@ -701,7 +760,8 @@
       "Jerusalem gilt als heilige Stadt für Judentum, Christentum und Islam.",
       "Die internationale Anerkennung als Hauptstadt ist politisch umstritten; viele Staaten unterhalten ihre Botschaften in Tel Aviv."
     ],
-    "code": "IL"
+    "code": "IL",
+    "difficulty": 1
   },
   {
     "country": "Japan",
@@ -714,7 +774,8 @@
     "aliases": [
       "Tokyo"
     ],
-    "code": "JP"
+    "code": "JP",
+    "difficulty": 1
   },
   {
     "country": "Jemen",
@@ -727,7 +788,8 @@
     "aliases": [
       "Sanaa"
     ],
-    "code": "YE"
+    "code": "YE",
+    "difficulty": 3
   },
   {
     "country": "Jordanien",
@@ -737,7 +799,8 @@
       "Amman ist über sieben Hügel erbaut, ähnlich wie Rom.",
       "In der Antike hieß die Stadt Philadelphia."
     ],
-    "code": "JO"
+    "code": "JO",
+    "difficulty": 2
   },
   {
     "country": "Kambodscha",
@@ -747,7 +810,8 @@
       "Phnom Penh liegt am Zusammenfluss von Mekong und Tonlé Sap.",
       "Der Name bedeutet sinngemäß 'Hügel der Penh', benannt nach einer Legende um eine Klosterstifterin."
     ],
-    "code": "KH"
+    "code": "KH",
+    "difficulty": 3
   },
   {
     "country": "Kasachstan",
@@ -760,7 +824,8 @@
     "aliases": [
       "Nursultan"
     ],
-    "code": "KZ"
+    "code": "KZ",
+    "difficulty": 3
   },
   {
     "country": "Katar",
@@ -770,7 +835,8 @@
       "Die Skyline von Doha entstand größtenteils erst in den letzten 30 Jahren durch Erdgas-Reichtum.",
       "2022 war Doha Austragungsort der Fußball-Weltmeisterschaft."
     ],
-    "code": "QA"
+    "code": "QA",
+    "difficulty": 2
   },
   {
     "country": "Kirgisistan",
@@ -783,7 +849,8 @@
     "aliases": [
       "Bishkek"
     ],
-    "code": "KG"
+    "code": "KG",
+    "difficulty": 4
   },
   {
     "country": "Kuwait",
@@ -796,7 +863,8 @@
     "aliases": [
       "Kuwait City"
     ],
-    "code": "KW"
+    "code": "KW",
+    "difficulty": 2
   },
   {
     "country": "Laos",
@@ -806,7 +874,8 @@
       "Vientiane liegt direkt am Mekong, der die Grenze zu Thailand bildet.",
       "Der Siegesbogen Patuxai wurde aus Zement gebaut, der eigentlich für einen Flughafen bestimmt war."
     ],
-    "code": "LA"
+    "code": "LA",
+    "difficulty": 3
   },
   {
     "country": "Libanon",
@@ -816,7 +885,8 @@
       "Beirut gilt als eine der ältesten kontinuierlich bewohnten Städte der Welt.",
       "Die Stadt wurde wegen ihres Nachtlebens einst 'Paris des Nahen Ostens' genannt."
     ],
-    "code": "LB"
+    "code": "LB",
+    "difficulty": 2
   },
   {
     "country": "Malaysia",
@@ -826,7 +896,8 @@
       "Die Petronas Towers waren von 1998 bis 2004 die höchsten Gebäude der Welt.",
       "Der Stadtname bedeutet 'schlammige Flussmündung'."
     ],
-    "code": "MY"
+    "code": "MY",
+    "difficulty": 2
   },
   {
     "country": "Malediven",
@@ -836,7 +907,8 @@
       "Malé ist eine der am dichtesten besiedelten Inseln der Welt.",
       "Die Hauptstadt liegt im Schnitt nur etwa einen Meter über dem Meeresspiegel."
     ],
-    "code": "MV"
+    "code": "MV",
+    "difficulty": 2
   },
   {
     "country": "Mongolei",
@@ -849,7 +921,8 @@
     "aliases": [
       "Ulan Bator"
     ],
-    "code": "MN"
+    "code": "MN",
+    "difficulty": 3
   },
   {
     "country": "Myanmar",
@@ -862,7 +935,8 @@
     "code": "MM",
     "countryAliases": [
       "Burma"
-    ]
+    ],
+    "difficulty": 3
   },
   {
     "country": "Nepal",
@@ -872,7 +946,8 @@
       "Das Kathmandutal beherbergt gleich mehrere UNESCO-Weltkulturerbestätten.",
       "Die Stadt liegt in einem Talkessel am Fuß des Himalaya."
     ],
-    "code": "NP"
+    "code": "NP",
+    "difficulty": 2
   },
   {
     "country": "Nordkorea",
@@ -889,7 +964,8 @@
     "countryAliases": [
       "North Korea",
       "DPRK"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "Oman",
@@ -902,7 +978,8 @@
     "aliases": [
       "Muscat"
     ],
-    "code": "OM"
+    "code": "OM",
+    "difficulty": 3
   },
   {
     "country": "Pakistan",
@@ -912,7 +989,8 @@
       "Islamabad wurde in den 1960er-Jahren als komplett neu geplante Hauptstadt errichtet.",
       "Die Faisal-Moschee zählt zu den größten Moscheen der Welt."
     ],
-    "code": "PK"
+    "code": "PK",
+    "difficulty": 1
   },
   {
     "country": "Palästina",
@@ -922,7 +1000,8 @@
       "Ramallah dient als de-facto-Verwaltungssitz der Palästinensischen Autonomiebehörde.",
       "Ost-Jerusalem wird von den Palästinensern als eigentliche Hauptstadt beansprucht."
     ],
-    "code": "PS"
+    "code": "PS",
+    "difficulty": 2
   },
   {
     "country": "Philippinen",
@@ -932,7 +1011,8 @@
       "Manila gehört zu den am dichtesten besiedelten Städten der Welt.",
       "Die Altstadt Intramuros wurde von spanischen Kolonialherren errichtet."
     ],
-    "code": "PH"
+    "code": "PH",
+    "difficulty": 1
   },
   {
     "country": "Saudi-Arabien",
@@ -945,7 +1025,8 @@
     "aliases": [
       "Riyadh"
     ],
-    "code": "SA"
+    "code": "SA",
+    "difficulty": 1
   },
   {
     "country": "Singapur",
@@ -958,7 +1039,8 @@
     "aliases": [
       "Singapore"
     ],
-    "code": "SG"
+    "code": "SG",
+    "difficulty": 1
   },
   {
     "country": "Sri Lanka",
@@ -972,7 +1054,8 @@
       "Colombo",
       "Kotte"
     ],
-    "code": "LK"
+    "code": "LK",
+    "difficulty": 2
   },
   {
     "country": "Südkorea",
@@ -987,7 +1070,8 @@
       "Korea",
       "South Korea",
       "Republik Korea"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "Syrien",
@@ -1000,7 +1084,8 @@
     "aliases": [
       "Damascus"
     ],
-    "code": "SY"
+    "code": "SY",
+    "difficulty": 2
   },
   {
     "country": "Tadschikistan",
@@ -1013,7 +1098,8 @@
     "aliases": [
       "Dushanbe"
     ],
-    "code": "TJ"
+    "code": "TJ",
+    "difficulty": 4
   },
   {
     "country": "Taiwan",
@@ -1023,7 +1109,8 @@
       "Der Wolkenkratzer Taipei 101 war von 2004 bis 2010 das höchste Gebäude der Welt.",
       "Taipeh liegt in einem Becken, umgeben von Bergen."
     ],
-    "code": "TW"
+    "code": "TW",
+    "difficulty": 2
   },
   {
     "country": "Thailand",
@@ -1033,7 +1120,8 @@
       "Der vollständige zeremonielle Name Bangkoks ist einer der längsten Ortsnamen der Welt.",
       "Die Stadt ist durchzogen von zahlreichen Kanälen, den sogenannten Khlongs."
     ],
-    "code": "TH"
+    "code": "TH",
+    "difficulty": 1
   },
   {
     "country": "Timor-Leste",
@@ -1047,7 +1135,8 @@
     "countryAliases": [
       "Osttimor",
       "East Timor"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "Türkei",
@@ -1057,7 +1146,8 @@
       "Nicht Istanbul, sondern Ankara ist die Hauptstadt der Türkei – seit 1923.",
       "Das Mausoleum Anıtkabir ist die letzte Ruhestätte von Staatsgründer Atatürk."
     ],
-    "code": "TR"
+    "code": "TR",
+    "difficulty": 1
   },
   {
     "country": "Turkmenistan",
@@ -1070,7 +1160,8 @@
     "aliases": [
       "Ashgabat"
     ],
-    "code": "TM"
+    "code": "TM",
+    "difficulty": 4
   },
   {
     "country": "Usbekistan",
@@ -1083,7 +1174,8 @@
     "aliases": [
       "Tashkent"
     ],
-    "code": "UZ"
+    "code": "UZ",
+    "difficulty": 3
   },
   {
     "country": "Vereinigte Arabische Emirate",
@@ -1098,7 +1190,8 @@
       "VAE",
       "UAE",
       "Emirate"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "Vietnam",
@@ -1108,7 +1201,8 @@
       "Hanoi ist mit über 1.000 Jahren eine der ältesten Hauptstädte Südostasiens.",
       "Der Name bedeutet sinngemäß 'zwischen den Flüssen'."
     ],
-    "code": "VN"
+    "code": "VN",
+    "difficulty": 1
   },
   {
     "country": "Ägypten",
@@ -1121,7 +1215,8 @@
     "aliases": [
       "Cairo"
     ],
-    "code": "EG"
+    "code": "EG",
+    "difficulty": 1
   },
   {
     "country": "Äquatorialguinea",
@@ -1131,7 +1226,8 @@
       "Malabo liegt auf der Insel Bioko, nicht auf dem afrikanischen Festland.",
       "Die Stadt entstand in einem erloschenen Vulkankrater."
     ],
-    "code": "GQ"
+    "code": "GQ",
+    "difficulty": 4
   },
   {
     "country": "Äthiopien",
@@ -1144,7 +1240,8 @@
     "aliases": [
       "Addis Ababa"
     ],
-    "code": "ET"
+    "code": "ET",
+    "difficulty": 2
   },
   {
     "country": "Algerien",
@@ -1158,7 +1255,8 @@
       "Algiers",
       "Alger"
     ],
-    "code": "DZ"
+    "code": "DZ",
+    "difficulty": 2
   },
   {
     "country": "Angola",
@@ -1168,7 +1266,8 @@
       "Luanda zählte zeitweise zu den teuersten Städten der Welt für Expatriates, bedingt durch den Ölreichtum.",
       "Die Stadt wurde 1576 von portugiesischen Siedlern gegründet."
     ],
-    "code": "AO"
+    "code": "AO",
+    "difficulty": 2
   },
   {
     "country": "Benin",
@@ -1178,7 +1277,8 @@
       "Porto-Novo ist offizielle Hauptstadt, während die Regierung in der größeren Stadt Cotonou sitzt.",
       "Der Name geht auf portugiesische Händler zurück, die an den Ort erinnerte."
     ],
-    "code": "BJ"
+    "code": "BJ",
+    "difficulty": 4
   },
   {
     "country": "Botswana",
@@ -1188,7 +1288,8 @@
       "Gaborone ist eine der am schnellsten gewachsenen Städte Afrikas seit der Unabhängigkeit 1966.",
       "Die Stadt liegt nahe dem Fluss Notwane."
     ],
-    "code": "BW"
+    "code": "BW",
+    "difficulty": 3
   },
   {
     "country": "Burkina Faso",
@@ -1198,7 +1299,8 @@
       "Ouagadougou ist Gastgeber des FESPACO, des größten Filmfestivals Afrikas.",
       "Der Name wird oft einfach 'Ouaga' abgekürzt."
     ],
-    "code": "BF"
+    "code": "BF",
+    "difficulty": 4
   },
   {
     "country": "Burundi",
@@ -1208,7 +1310,8 @@
       "Gitega löste 2019 Bujumbura als offizielle Hauptstadt ab.",
       "Bujumbura bleibt aber weiterhin das wirtschaftliche Zentrum des Landes."
     ],
-    "code": "BI"
+    "code": "BI",
+    "difficulty": 4
   },
   {
     "country": "Dschibuti",
@@ -1218,7 +1321,8 @@
       "Die Stadt Dschibuti trägt denselben Namen wie das Land.",
       "Wegen ihrer strategischen Lage am Horn von Afrika unterhalten mehrere Nationen dort Militärstützpunkte."
     ],
-    "code": "DJ"
+    "code": "DJ",
+    "difficulty": 4
   },
   {
     "country": "Elfenbeinküste",
@@ -1233,7 +1337,8 @@
       "Cote d'Ivoire",
       "Ivory Coast",
       "Côte d'Ivoire"
-    ]
+    ],
+    "difficulty": 2
   },
   {
     "country": "Eritrea",
@@ -1243,7 +1348,8 @@
       "Asmara ist für seine gut erhaltene Art-déco- und Moderne-Architektur aus der italienischen Kolonialzeit bekannt.",
       "Die Altstadt wurde deshalb zum UNESCO-Weltkulturerbe erklärt."
     ],
-    "code": "ER"
+    "code": "ER",
+    "difficulty": 4
   },
   {
     "country": "Eswatini",
@@ -1257,7 +1363,8 @@
     "countryAliases": [
       "Swasiland",
       "Swaziland"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "Gabun",
@@ -1267,7 +1374,8 @@
       "Der Name Libreville bedeutet 'Freistadt' und geht auf befreite Sklaven zurück, die sich dort ansiedelten.",
       "Die Stadt liegt an der Atlantikküste."
     ],
-    "code": "GA"
+    "code": "GA",
+    "difficulty": 4
   },
   {
     "country": "Gambia",
@@ -1277,7 +1385,8 @@
       "Banjul liegt auf einer Insel an der Mündung des Flusses Gambia.",
       "Es ist eine der kleinsten Hauptstädte Afrikas nach Einwohnerzahl."
     ],
-    "code": "GM"
+    "code": "GM",
+    "difficulty": 4
   },
   {
     "country": "Ghana",
@@ -1287,7 +1396,8 @@
       "Accra war einst ein bedeutendes Zentrum des transatlantischen Sklavenhandels, an das heute Festungen erinnern.",
       "Der Name leitet sich vermutlich vom Wort für 'Ameisen' in einer lokalen Sprache ab."
     ],
-    "code": "GH"
+    "code": "GH",
+    "difficulty": 2
   },
   {
     "country": "Guinea",
@@ -1297,7 +1407,8 @@
       "Conakry liegt größtenteils auf der Halbinsel Kaloum und erstreckt sich als schmaler Streifen.",
       "Die Stadt war einst als 'Paris von Westafrika' bekannt."
     ],
-    "code": "GN"
+    "code": "GN",
+    "difficulty": 3
   },
   {
     "country": "Guinea-Bissau",
@@ -1307,7 +1418,8 @@
       "Bissau liegt an der Mündung des Flusses Geba in den Atlantik.",
       "Die portugiesische Kolonialfestung Fortaleza d'Amura prägt bis heute das Stadtbild."
     ],
-    "code": "GW"
+    "code": "GW",
+    "difficulty": 4
   },
   {
     "country": "Kamerun",
@@ -1321,7 +1433,8 @@
       "Yaounde",
       "Yaoundé"
     ],
-    "code": "CM"
+    "code": "CM",
+    "difficulty": 2
   },
   {
     "country": "Kap Verde",
@@ -1335,7 +1448,8 @@
     "countryAliases": [
       "Cabo Verde",
       "Cape Verde"
-    ]
+    ],
+    "difficulty": 3
   },
   {
     "country": "Kenia",
@@ -1345,7 +1459,8 @@
       "Nairobi besitzt mit dem Nairobi-Nationalpark einen Wildtierpark direkt vor den Toren der Innenstadt.",
       "Der Name stammt aus der Maasai-Sprache und bedeutet sinngemäß 'kaltes Wasser'."
     ],
-    "code": "KE"
+    "code": "KE",
+    "difficulty": 1
   },
   {
     "country": "Komoren",
@@ -1355,7 +1470,8 @@
       "Moroni liegt am Fuß des aktiven Vulkans Karthala.",
       "Die Stadt befindet sich auf der Insel Grande Comore."
     ],
-    "code": "KM"
+    "code": "KM",
+    "difficulty": 4
   },
   {
     "country": "Kongo, Demokratische Republik",
@@ -1372,7 +1488,8 @@
       "Kongo Kinshasa",
       "Demokratische Republik Kongo",
       "Kongo-Kinshasa"
-    ]
+    ],
+    "difficulty": 2
   },
   {
     "country": "Kongo, Republik",
@@ -1387,7 +1504,8 @@
       "Republik Kongo",
       "Kongo Brazzaville",
       "Kongo-Brazzaville"
-    ]
+    ],
+    "difficulty": 3
   },
   {
     "country": "Lesotho",
@@ -1397,7 +1515,8 @@
       "Maseru liegt direkt an der Grenze zu Südafrika, das Lesotho komplett umschließt.",
       "Der Name bedeutet sinngemäß 'Ort der roten Sandsteine'."
     ],
-    "code": "LS"
+    "code": "LS",
+    "difficulty": 4
   },
   {
     "country": "Liberia",
@@ -1407,7 +1526,8 @@
       "Monrovia wurde nach dem US-Präsidenten James Monroe benannt.",
       "Die Stadt wurde im 19. Jahrhundert von freigelassenen amerikanischen Sklaven gegründet."
     ],
-    "code": "LR"
+    "code": "LR",
+    "difficulty": 3
   },
   {
     "country": "Libyen",
@@ -1420,7 +1540,8 @@
     "aliases": [
       "Tripoli"
     ],
-    "code": "LY"
+    "code": "LY",
+    "difficulty": 2
   },
   {
     "country": "Madagaskar",
@@ -1430,7 +1551,8 @@
       "Der Name bedeutet sinngemäß 'Stadt der Tausend', nach einer Legende über tausend Soldaten, die sie bewachten.",
       "Die Stadt liegt auf mehreren Hügeln im Hochland der Insel."
     ],
-    "code": "MG"
+    "code": "MG",
+    "difficulty": 2
   },
   {
     "country": "Malawi",
@@ -1440,7 +1562,8 @@
       "Lilongwe löste 1975 Zomba als Hauptstadt Malawis ab.",
       "Die Stadt ist nach dem gleichnamigen Fluss benannt, der sie durchquert."
     ],
-    "code": "MW"
+    "code": "MW",
+    "difficulty": 3
   },
   {
     "country": "Mali",
@@ -1450,7 +1573,8 @@
       "Bamako liegt am Fluss Niger und war einst Teil bedeutender westafrikanischer Handelsrouten.",
       "Die Stadt gilt heute als kulturelles Zentrum der westafrikanischen Musikszene."
     ],
-    "code": "ML"
+    "code": "ML",
+    "difficulty": 3
   },
   {
     "country": "Marokko",
@@ -1460,7 +1584,8 @@
       "Nicht Casablanca, sondern das kleinere Rabat ist die Hauptstadt Marokkos.",
       "Der unvollendete Hassan-Turm sollte einst zum höchsten Minarett der Welt werden."
     ],
-    "code": "MA"
+    "code": "MA",
+    "difficulty": 1
   },
   {
     "country": "Mauretanien",
@@ -1470,7 +1595,8 @@
       "Nouakchott liegt am Rande der Sahara und war um 1960 noch ein kleines Fischerdorf.",
       "Es ist heute eine der am schnellsten wachsenden Städte der Sahelzone."
     ],
-    "code": "MR"
+    "code": "MR",
+    "difficulty": 3
   },
   {
     "country": "Mauritius",
@@ -1480,7 +1606,8 @@
       "Port Louis liegt am Fuß des markanten Bergs Le Pouce.",
       "Die Stadt wurde nach dem französischen König Ludwig XV. benannt."
     ],
-    "code": "MU"
+    "code": "MU",
+    "difficulty": 2
   },
   {
     "country": "Mosambik",
@@ -1490,7 +1617,8 @@
       "Maputo hieß zu portugiesischer Kolonialzeit Lourenço Marques.",
       "Die Stadt liegt an einer geschützten Bucht des Indischen Ozeans."
     ],
-    "code": "MZ"
+    "code": "MZ",
+    "difficulty": 2
   },
   {
     "country": "Namibia",
@@ -1500,7 +1628,8 @@
       "Windhoek liegt auf rund 1.700 Metern Höhe in einem zentralen Hochplateau Namibias.",
       "Die Architektur der Stadt trägt bis heute deutliche Spuren der deutschen Kolonialzeit."
     ],
-    "code": "NA"
+    "code": "NA",
+    "difficulty": 2
   },
   {
     "country": "Niger",
@@ -1510,7 +1639,8 @@
       "Niamey liegt am Ufer des Flusses Niger.",
       "Die Stadt ist eine der heißesten Hauptstädte der Welt."
     ],
-    "code": "NE"
+    "code": "NE",
+    "difficulty": 3
   },
   {
     "country": "Nigeria",
@@ -1520,7 +1650,8 @@
       "Abuja wurde in den 1980er-Jahren als geplante, zentraler gelegene Hauptstadt errichtet und löste Lagos ab.",
       "Der markante Monolith Aso Rock überragt die Stadt."
     ],
-    "code": "NG"
+    "code": "NG",
+    "difficulty": 1
   },
   {
     "country": "Ruanda",
@@ -1530,7 +1661,8 @@
       "Kigali gilt heute als eine der saubersten Städte Afrikas, unter anderem wegen monatlicher Pflichtreinigungstage.",
       "Die Stadt liegt auf mehreren Hügeln im Zentrum des Landes."
     ],
-    "code": "RW"
+    "code": "RW",
+    "difficulty": 2
   },
   {
     "country": "Sambia",
@@ -1540,7 +1672,8 @@
       "Lusaka ist nach einem Dorfältesten namens Lusaka benannt, auf dessen Land die Stadt entstand.",
       "Sie liegt auf einem Kalksteinplateau im Süden des Landes."
     ],
-    "code": "ZM"
+    "code": "ZM",
+    "difficulty": 2
   },
   {
     "country": "São Tomé und Príncipe",
@@ -1557,7 +1690,8 @@
     "countryAliases": [
       "Sao Tome und Principe",
       "Sao Tome"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "Senegal",
@@ -1567,7 +1701,8 @@
       "Dakar liegt auf der Halbinsel Kap-Vert, dem westlichsten Punkt des afrikanischen Festlands.",
       "Die Stadt war früher Zielort der berühmten Rallye Dakar."
     ],
-    "code": "SN"
+    "code": "SN",
+    "difficulty": 2
   },
   {
     "country": "Seychellen",
@@ -1577,7 +1712,8 @@
       "Victoria auf der Insel Mahé gilt als eine der kleinsten Hauptstädte der Welt.",
       "Sie wurde nach der britischen Königin Victoria benannt."
     ],
-    "code": "SC"
+    "code": "SC",
+    "difficulty": 3
   },
   {
     "country": "Sierra Leone",
@@ -1587,7 +1723,8 @@
       "Freetown wurde 1792 von befreiten Sklaven aus Großbritannien und Nordamerika gegründet.",
       "Die Stadt liegt an einer der größten natürlichen Häfen Afrikas."
     ],
-    "code": "SL"
+    "code": "SL",
+    "difficulty": 3
   },
   {
     "country": "Simbabwe",
@@ -1597,7 +1734,8 @@
       "Harare hieß bis 1982 Salisbury, benannt nach einem britischen Premierminister.",
       "Die Stadt liegt auf einem Hochplateau auf rund 1.500 Metern Höhe."
     ],
-    "code": "ZW"
+    "code": "ZW",
+    "difficulty": 2
   },
   {
     "country": "Somalia",
@@ -1610,7 +1748,8 @@
     "aliases": [
       "Mogadishu"
     ],
-    "code": "SO"
+    "code": "SO",
+    "difficulty": 2
   },
   {
     "country": "Südafrika",
@@ -1620,7 +1759,8 @@
       "Südafrika hat drei Hauptstädte: Pretoria (Regierung), Kapstadt (Parlament) und Bloemfontein (Justiz).",
       "Pretoria wird wegen seiner vielen blühenden Jacaranda-Bäume auch 'Jacaranda-Stadt' genannt."
     ],
-    "code": "ZA"
+    "code": "ZA",
+    "difficulty": 1
   },
   {
     "country": "Südsudan",
@@ -1630,7 +1770,8 @@
       "Juba liegt am Weißen Nil und wurde 2011 Hauptstadt des jüngsten Staates der Welt.",
       "Die Stadt wächst seit der Unabhängigkeit rasant."
     ],
-    "code": "SS"
+    "code": "SS",
+    "difficulty": 3
   },
   {
     "country": "Sudan",
@@ -1643,7 +1784,8 @@
     "aliases": [
       "Khartoum"
     ],
-    "code": "SD"
+    "code": "SD",
+    "difficulty": 2
   },
   {
     "country": "Tansania",
@@ -1653,7 +1795,8 @@
       "Dodoma löste offiziell Daressalam als Hauptstadt ab, das aber wirtschaftlich weiterhin das Zentrum des Landes ist.",
       "Die Stadt liegt zentral im Landesinneren Tansanias."
     ],
-    "code": "TZ"
+    "code": "TZ",
+    "difficulty": 2
   },
   {
     "country": "Togo",
@@ -1663,7 +1806,8 @@
       "Lomé liegt direkt an der Grenze zu Ghana am Golf von Guinea.",
       "Die Stadt ist bekannt für ihren belebten Fetisch- und Kräutermarkt."
     ],
-    "code": "TG"
+    "code": "TG",
+    "difficulty": 3
   },
   {
     "country": "Tschad",
@@ -1676,7 +1820,8 @@
     "aliases": [
       "Ndjamena"
     ],
-    "code": "TD"
+    "code": "TD",
+    "difficulty": 3
   },
   {
     "country": "Tunesien",
@@ -1686,7 +1831,8 @@
       "Nahe Tunis liegen die Ruinen der antiken Stadt Karthago.",
       "Die Medina von Tunis gehört zum UNESCO-Weltkulturerbe."
     ],
-    "code": "TN"
+    "code": "TN",
+    "difficulty": 2
   },
   {
     "country": "Uganda",
@@ -1696,7 +1842,8 @@
       "Kampala ist wie Rom über mehrere Hügel erbaut.",
       "Der Name geht auf Impala-Antilopen zurück, die dort einst von Königen gehalten wurden."
     ],
-    "code": "UG"
+    "code": "UG",
+    "difficulty": 2
   },
   {
     "country": "Zentralafrikanische Republik",
@@ -1706,7 +1853,8 @@
       "Bangui liegt am Ufer des Flusses Ubangi.",
       "Der Name bedeutet sinngemäß 'die Stromschnellen', nach einem Wasserfall im Fluss."
     ],
-    "code": "CF"
+    "code": "CF",
+    "difficulty": 4
   },
   {
     "country": "Antigua und Barbuda",
@@ -1720,7 +1868,8 @@
       "Saint John's",
       "Saint Johns"
     ],
-    "code": "AG"
+    "code": "AG",
+    "difficulty": 4
   },
   {
     "country": "Bahamas",
@@ -1730,7 +1879,8 @@
       "Nassau liegt auf der Insel New Providence und war einst ein bekanntes Piratenversteck.",
       "Die Stadt wurde nach dem Haus Nassau-Oranien benannt."
     ],
-    "code": "BS"
+    "code": "BS",
+    "difficulty": 2
   },
   {
     "country": "Barbados",
@@ -1740,7 +1890,8 @@
       "Die Handelsbörse von Bridgetown zählt zum UNESCO-Weltkulturerbe.",
       "Die Stadt liegt an der geschützten Carlisle Bay im Südwesten der Insel."
     ],
-    "code": "BB"
+    "code": "BB",
+    "difficulty": 2
   },
   {
     "country": "Belize",
@@ -1750,7 +1901,8 @@
       "Belmopan wurde nach der Zerstörung der alten Hauptstadt Belize City durch einen Hurrikan 1970 neu gegründet.",
       "Mit nur wenigen tausend Einwohnern ist es eine der kleinsten Hauptstädte der Welt."
     ],
-    "code": "BZ"
+    "code": "BZ",
+    "difficulty": 3
   },
   {
     "country": "Costa Rica",
@@ -1760,7 +1912,8 @@
       "San José liegt in einem fruchtbaren Hochtal, umgeben von Vulkanen.",
       "Die Stadt entwickelte sich im 19. Jahrhundert stark durch den Kaffeehandel."
     ],
-    "code": "CR"
+    "code": "CR",
+    "difficulty": 2
   },
   {
     "country": "Dominica",
@@ -1770,7 +1923,8 @@
       "Roseau liegt an der Mündung des Flusses Roseau an der Karibikküste.",
       "Der Name stammt vom französischen Wort für Schilfrohr."
     ],
-    "code": "DM"
+    "code": "DM",
+    "difficulty": 4
   },
   {
     "country": "Dominikanische Republik",
@@ -1780,7 +1934,8 @@
       "Santo Domingo wurde 1496 gegründet und ist die älteste dauerhaft europäisch besiedelte Stadt Amerikas.",
       "Die Kolonialzone der Stadt gehört zum UNESCO-Weltkulturerbe."
     ],
-    "code": "DO"
+    "code": "DO",
+    "difficulty": 2
   },
   {
     "country": "El Salvador",
@@ -1790,7 +1945,8 @@
       "San Salvador liegt in einem Tal, das von mehreren Vulkanen umgeben ist, darunter der Vulkan San Salvador.",
       "Die Stadt wurde im Laufe ihrer Geschichte durch zahlreiche Erdbeben stark beschädigt und wiederaufgebaut."
     ],
-    "code": "SV"
+    "code": "SV",
+    "difficulty": 2
   },
   {
     "country": "Grenada",
@@ -1803,7 +1959,8 @@
     "aliases": [
       "Saint George's"
     ],
-    "code": "GD"
+    "code": "GD",
+    "difficulty": 4
   },
   {
     "country": "Guatemala",
@@ -1816,7 +1973,8 @@
     "aliases": [
       "Guatemala City"
     ],
-    "code": "GT"
+    "code": "GT",
+    "difficulty": 2
   },
   {
     "country": "Haiti",
@@ -1826,7 +1984,8 @@
       "Port-au-Prince wurde 2010 von einem verheerenden Erdbeben schwer getroffen.",
       "Die Stadt liegt an einer Bucht der Karibikküste."
     ],
-    "code": "HT"
+    "code": "HT",
+    "difficulty": 2
   },
   {
     "country": "Honduras",
@@ -1836,7 +1995,8 @@
       "Der Name Tegucigalpa stammt vermutlich aus einer indigenen Sprache und bedeutet sinngemäß 'silberner Hügel'.",
       "Die Stadt liegt in einem Talkessel, umgeben von Bergen."
     ],
-    "code": "HN"
+    "code": "HN",
+    "difficulty": 2
   },
   {
     "country": "Jamaika",
@@ -1846,7 +2006,8 @@
       "Kingston besitzt einen der größten natürlichen Naturhäfen der Welt.",
       "Die Stadt gilt als Geburtsort des Reggae und Wirkungsort von Bob Marley."
     ],
-    "code": "JM"
+    "code": "JM",
+    "difficulty": 1
   },
   {
     "country": "Kanada",
@@ -1856,7 +2017,8 @@
       "Nicht Toronto, sondern das kleinere Ottawa ist die Hauptstadt Kanadas.",
       "Der Rideau-Kanal in Ottawa wird im Winter zur längsten natürlichen Eisbahn der Welt."
     ],
-    "code": "CA"
+    "code": "CA",
+    "difficulty": 1
   },
   {
     "country": "Kuba",
@@ -1870,7 +2032,8 @@
       "Havana",
       "La Habana"
     ],
-    "code": "CU"
+    "code": "CU",
+    "difficulty": 1
   },
   {
     "country": "Mexiko",
@@ -1885,7 +2048,8 @@
       "Ciudad de Mexico",
       "Mexico-Stadt"
     ],
-    "code": "MX"
+    "code": "MX",
+    "difficulty": 1
   },
   {
     "country": "Nicaragua",
@@ -1895,7 +2059,8 @@
       "Managua liegt am Ufer des gleichnamigen Sees.",
       "Nach schweren Erdbeben, zuletzt 1972, hat die Stadt kein klassisches historisches Zentrum mehr."
     ],
-    "code": "NI"
+    "code": "NI",
+    "difficulty": 2
   },
   {
     "country": "Panama",
@@ -1908,7 +2073,8 @@
     "aliases": [
       "Panama City"
     ],
-    "code": "PA"
+    "code": "PA",
+    "difficulty": 1
   },
   {
     "country": "St. Kitts und Nevis",
@@ -1926,7 +2092,8 @@
     "countryAliases": [
       "Saint Kitts und Nevis",
       "Saint Kitts"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "St. Lucia",
@@ -1939,7 +2106,8 @@
     "code": "LC",
     "countryAliases": [
       "Saint Lucia"
-    ]
+    ],
+    "difficulty": 3
   },
   {
     "country": "St. Vincent und die Grenadinen",
@@ -1953,7 +2121,8 @@
     "countryAliases": [
       "Saint Vincent",
       "St Vincent und die Grenadinen"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "Trinidad und Tobago",
@@ -1963,7 +2132,8 @@
       "Port of Spain ist bekannt für seinen ausgelassenen Karneval, einen der größten der Karibik.",
       "Die Stadt liegt auf der größeren Insel Trinidad."
     ],
-    "code": "TT"
+    "code": "TT",
+    "difficulty": 2
   },
   {
     "country": "Vereinigte Staaten",
@@ -1984,7 +2154,8 @@
       "United States",
       "Amerika",
       "US"
-    ]
+    ],
+    "difficulty": 1
   },
   {
     "country": "Argentinien",
@@ -1994,7 +2165,8 @@
       "Buenos Aires wird wegen seiner europäisch geprägten Architektur oft 'Paris Südamerikas' genannt.",
       "Der Tango entstand in den Vierteln dieser Stadt."
     ],
-    "code": "AR"
+    "code": "AR",
+    "difficulty": 1
   },
   {
     "country": "Bolivien",
@@ -2007,7 +2179,8 @@
     "aliases": [
       "La Paz"
     ],
-    "code": "BO"
+    "code": "BO",
+    "difficulty": 2
   },
   {
     "country": "Brasilien",
@@ -2017,7 +2190,8 @@
       "Brasília wurde 1960 komplett neu aus dem Boden gestampft und aus der Luft betrachtet wie ein Flugzeug angelegt.",
       "Die moderne Architektur der Stadt, entworfen von Oscar Niemeyer, gehört zum UNESCO-Weltkulturerbe."
     ],
-    "code": "BR"
+    "code": "BR",
+    "difficulty": 1
   },
   {
     "country": "Chile",
@@ -2030,7 +2204,8 @@
     "aliases": [
       "Santiago"
     ],
-    "code": "CL"
+    "code": "CL",
+    "difficulty": 1
   },
   {
     "country": "Ecuador",
@@ -2040,7 +2215,8 @@
       "Quito liegt auf rund 2.850 Metern Höhe und ist damit eine der höchstgelegenen Hauptstädte der Welt.",
       "Die gut erhaltene Altstadt war 1978 eine der ersten Stätten überhaupt auf der UNESCO-Weltkulturerbeliste."
     ],
-    "code": "EC"
+    "code": "EC",
+    "difficulty": 2
   },
   {
     "country": "Guyana",
@@ -2050,7 +2226,8 @@
       "Georgetown liegt unterhalb des Meeresspiegels und wird durch Deiche vor dem Atlantik geschützt.",
       "Viele Gebäude der Stadt sind aus Holz im viktorianischen Kolonialstil errichtet."
     ],
-    "code": "GY"
+    "code": "GY",
+    "difficulty": 3
   },
   {
     "country": "Kolumbien",
@@ -2060,7 +2237,8 @@
       "Bogotá liegt auf einem Hochplateau in den Anden auf über 2.600 Metern Höhe.",
       "Die Stadt besitzt eines der größten Fahrradwegenetze Lateinamerikas."
     ],
-    "code": "CO"
+    "code": "CO",
+    "difficulty": 1
   },
   {
     "country": "Paraguay",
@@ -2070,7 +2248,8 @@
       "Asunción zählt zu den ältesten Städten Südamerikas und wurde 1537 gegründet.",
       "Die Stadt liegt am Ufer des Flusses Paraguay."
     ],
-    "code": "PY"
+    "code": "PY",
+    "difficulty": 2
   },
   {
     "country": "Peru",
@@ -2080,7 +2259,8 @@
       "Die historische Altstadt von Lima mit ihren Kolonialbauten gehört zum UNESCO-Weltkulturerbe.",
       "Trotz Wüstenlage an der Pazifikküste ist Lima wegen des Küstennebels oft in Wolken gehüllt."
     ],
-    "code": "PE"
+    "code": "PE",
+    "difficulty": 1
   },
   {
     "country": "Suriname",
@@ -2090,7 +2270,8 @@
       "Paramaribo ist für seine gut erhaltene niederländische Kolonialarchitektur aus Holz bekannt.",
       "Die historische Innenstadt gehört zum UNESCO-Weltkulturerbe."
     ],
-    "code": "SR"
+    "code": "SR",
+    "difficulty": 3
   },
   {
     "country": "Uruguay",
@@ -2100,7 +2281,8 @@
       "In Montevideo fand 1930 die allererste Fußball-Weltmeisterschaft statt.",
       "Die Stadt liegt an der Mündung des Río de la Plata."
     ],
-    "code": "UY"
+    "code": "UY",
+    "difficulty": 2
   },
   {
     "country": "Venezuela",
@@ -2110,7 +2292,8 @@
       "Caracas liegt in einem Tal, das durch den Nationalpark El Ávila von der Karibikküste getrennt wird.",
       "Die Stadt ist Geburtsort des südamerikanischen Unabhängigkeitshelden Simón Bolívar."
     ],
-    "code": "VE"
+    "code": "VE",
+    "difficulty": 1
   },
   {
     "country": "Australien",
@@ -2120,7 +2303,8 @@
       "Nicht Sydney, sondern das eigens geplante Canberra ist Australiens Hauptstadt – ein Kompromiss zwischen Sydney und Melbourne.",
       "Der künstlich angelegte Lake Burley Griffin bildet das Zentrum der Stadt."
     ],
-    "code": "AU"
+    "code": "AU",
+    "difficulty": 1
   },
   {
     "country": "Fidschi",
@@ -2130,7 +2314,8 @@
       "Suva liegt auf der Insel Viti Levu und gilt als eine der regenreichsten Hauptstädte der Welt.",
       "Die Stadt ist zugleich wichtiges Handels- und Regierungszentrum der Südsee-Region."
     ],
-    "code": "FJ"
+    "code": "FJ",
+    "difficulty": 2
   },
   {
     "country": "Kiribati",
@@ -2143,7 +2328,8 @@
     "aliases": [
       "South Tarawa"
     ],
-    "code": "KI"
+    "code": "KI",
+    "difficulty": 4
   },
   {
     "country": "Marshallinseln",
@@ -2153,7 +2339,8 @@
       "Majuro liegt auf einem schmalen Atollring, teils nur wenige hundert Meter breit.",
       "Die höchste natürliche Erhebung des Landes liegt nur etwa 3 Meter über dem Meer."
     ],
-    "code": "MH"
+    "code": "MH",
+    "difficulty": 4
   },
   {
     "country": "Mikronesien",
@@ -2167,7 +2354,8 @@
     "countryAliases": [
       "Föderierte Staaten von Mikronesien",
       "Micronesia"
-    ]
+    ],
+    "difficulty": 4
   },
   {
     "country": "Nauru",
@@ -2177,7 +2365,8 @@
       "Nauru hat offiziell keine ausgewiesene Hauptstadt; die Regierung sitzt im Distrikt Yaren.",
       "Nauru ist mit rund 21 km² einer der kleinsten Staaten der Welt."
     ],
-    "code": "NR"
+    "code": "NR",
+    "difficulty": 4
   },
   {
     "country": "Neuseeland",
@@ -2187,7 +2376,8 @@
       "Nicht Auckland, sondern Wellington ist Neuseelands Hauptstadt und gilt als südlichste Hauptstadt der Welt.",
       "Wellington ist bekannt für seine starken, beständigen Winde."
     ],
-    "code": "NZ"
+    "code": "NZ",
+    "difficulty": 1
   },
   {
     "country": "Palau",
@@ -2200,7 +2390,8 @@
     "aliases": [
       "Koror"
     ],
-    "code": "PW"
+    "code": "PW",
+    "difficulty": 4
   },
   {
     "country": "Papua-Neuguinea",
@@ -2210,7 +2401,8 @@
       "Port Moresby ist über keine Straße mit den meisten anderen Landesteilen verbunden und nur per Flugzeug oder Schiff erreichbar.",
       "Die Stadt liegt an der Südküste der Insel Neuguinea."
     ],
-    "code": "PG"
+    "code": "PG",
+    "difficulty": 3
   },
   {
     "country": "Salomonen",
@@ -2220,7 +2412,8 @@
       "Honiara war im Zweiten Weltkrieg Schauplatz der berühmten Schlacht um Guadalcanal.",
       "Die Stadt liegt an der Nordküste der Insel Guadalcanal."
     ],
-    "code": "SB"
+    "code": "SB",
+    "difficulty": 4
   },
   {
     "country": "Samoa",
@@ -2230,7 +2423,8 @@
       "In Apia verbrachte der Schriftsteller Robert Louis Stevenson seine letzten Lebensjahre.",
       "Die Stadt liegt auf der Insel Upolu."
     ],
-    "code": "WS"
+    "code": "WS",
+    "difficulty": 3
   },
   {
     "country": "Tonga",
@@ -2240,7 +2434,8 @@
       "Nuku'alofa liegt auf der Hauptinsel Tongatapu.",
       "Tonga ist die letzte verbliebene Monarchie in Ozeanien."
     ],
-    "code": "TO"
+    "code": "TO",
+    "difficulty": 3
   },
   {
     "country": "Tuvalu",
@@ -2250,7 +2445,8 @@
       "Funafuti liegt auf einem schmalen Atoll und ist eine der kleinsten Hauptstädte der Welt.",
       "Der höchste Punkt des gesamten Landes liegt nur rund 4,5 Meter über dem Meeresspiegel."
     ],
-    "code": "TV"
+    "code": "TV",
+    "difficulty": 4
   },
   {
     "country": "Vanuatu",
@@ -2260,6 +2456,7 @@
       "Port Vila liegt an einer geschützten Bucht auf der Insel Éfaté.",
       "Die Stadt gilt wegen ihrer Lage in einer erdbeben- und vulkanreichen Region als naturkatastrophengefährdet."
     ],
-    "code": "VU"
+    "code": "VU",
+    "difficulty": 3
   }
 ]

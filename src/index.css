@@ -178,17 +178,84 @@ body {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.region-tag {
+.card-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.region-tag,
+.difficulty-tag {
   display: inline-block;
   font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.08);
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  margin-bottom: 0.9rem;
+}
+
+.region-tag {
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.difficulty-tag.tier-1 { color: var(--green); background: rgba(48, 209, 88, 0.14); }
+.difficulty-tag.tier-2 { color: #ffd60a; background: rgba(255, 214, 10, 0.14); }
+.difficulty-tag.tier-3 { color: #ff9f0a; background: rgba(255, 159, 10, 0.14); }
+.difficulty-tag.tier-4 { color: var(--red); background: rgba(255, 69, 58, 0.14); }
+
+/* ---------- Tier progress ---------- */
+
+.tier-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0 1rem 0.7rem;
+  color: var(--text-tertiary);
+  font-size: 0.75rem;
+}
+
+.tier-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.tier-dot.is-unlocked.tier-1 { background: var(--green); }
+.tier-dot.is-unlocked.tier-2 { background: #ffd60a; }
+.tier-dot.is-unlocked.tier-3 { background: #ff9f0a; }
+.tier-dot.is-unlocked.tier-4 { background: var(--red); }
+
+.tier-progress-label {
+  margin-left: 0.3rem;
+}
+
+.tier-toast {
+  position: absolute;
+  top: calc(var(--safe-top) + 4.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(48, 209, 88, 0.92);
+  color: #04140a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 5;
+  cursor: pointer;
+  animation: toast-in 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  white-space: nowrap;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, -8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 .card h1 {

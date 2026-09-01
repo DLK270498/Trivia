@@ -5,6 +5,7 @@ import { isFuzzyMatch } from './match.js'
 
 const NEW_CARDS_PER_SESSION = 20
 const REQUEUE_OFFSET = 5
+const UNLOCK_KEY = '__unlockedTier'
 
 function shuffle(array) {
   const copy = [...array]
@@ -15,12 +16,40 @@ function shuffle(array) {
   return copy
 }
 
-function buildQueue(items, progress) {
+function groupByTier(items) {
+  const map = new Map()
+  items.forEach((item) => {
+    const tier = item.difficulty || 1
+    if (!map.has(tier)) map.set(tier, [])
+    map.get(tier).push(item)
+  })
+  return map
+}
+
+// Eine Stufe gilt als gemeistert, wenn jedes ihrer Länder im Leitner-System
+// den Status "gelernt" erreicht hat. Erst dann schaltet sich die nächste
+// Schwierigkeitsstufe frei - und das dauerhaft, auch wenn später mal eine
+// Karte wieder falsch beantwortet wird.
+function computeUnlockedTier(progress, itemsByTier, maxTier) {
+  let unlocked = Math.max(1, progress[UNLOCK_KEY] || 1)
+  while (unlocked < maxTier) {
+    const tierItems = itemsByTier.get(unlocked) || []
+    const allMastered =
+      tierItems.length > 0 &&
+      tierItems.every((item) => isMastered(progress[item.country] || makeInitialEntry()))
+    if (!allMastered) break
+    unlocked += 1
+  }
+  return unlocked
+}
+
+function buildQueue(items, progress, unlockedTier) {
   const now = Date.now()
   const due = []
   const fresh = []
 
   items.forEach((item, i) => {
+    if ((item.difficulty || 1) > unlockedTier) return
     const entry = progress[item.country] || makeInitialEntry()
     if (isNew(entry)) {
       fresh.push(i)
@@ -33,10 +62,11 @@ function buildQueue(items, progress) {
   return shuffle([...due, ...newSlice])
 }
 
-// Generischer Lern-Motor (Leitner-Wiederholung + Fuzzy-Bewertung), parametrisiert
-// über Item-Liste, Speicher-Schlüssel und eine Funktion, die die richtige Antwort
-// (+ Aliase) für ein Item liefert. So können mehrere Quiz-Modi (Hauptstädte,
-// Flaggen, ...) dieselbe Logik mit getrenntem Fortschritt nutzen.
+// Generischer Lern-Motor (Leitner-Wiederholung, Schwierigkeitsstufen-Freischaltung
+// + Fuzzy-Bewertung), parametrisiert über Item-Liste, Speicher-Schlüssel und eine
+// Funktion, die die richtige Antwort (+ Aliase) für ein Item liefert. So können
+// mehrere Quiz-Modi (Hauptstädte, Flaggen, ...) dieselbe Logik mit getrenntem
+// Fortschritt nutzen.
 export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
   const [progress, setProgress] = useState(null)
   const [queue, setQueue] = useState([])
@@ -44,15 +74,21 @@ export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
   const [guess, setGuess] = useState('')
   const [wasCorrect, setWasCorrect] = useState(false)
   const [sessionDone, setSessionDone] = useState(0)
+  const [tierJustUnlocked, setTierJustUnlocked] = useState(null)
   const progressRef = useRef(progress)
   progressRef.current = progress
 
+  const itemsByTier = useMemo(() => groupByTier(items), [items])
+  const maxTier = useMemo(() => Math.max(...items.map((i) => i.difficulty || 1)), [items])
+
   useEffect(() => {
     loadProgress(storageKey).then((loaded) => {
-      setProgress(loaded)
-      setQueue(buildQueue(items, loaded))
+      const unlocked = computeUnlockedTier(loaded, itemsByTier, maxTier)
+      const withUnlock = { ...loaded, [UNLOCK_KEY]: unlocked }
+      setProgress(withUnlock)
+      setQueue(buildQueue(items, withUnlock, unlocked))
     })
-    // items ist für die Lebensdauer der App statisch, storageKey ist der eigentliche Schlüssel.
+    // items/itemsByTier/maxTier sind für die Lebensdauer der App statisch.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [storageKey])
 
@@ -71,13 +107,21 @@ export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [progress])
 
+  const unlockedTier = progress ? progress[UNLOCK_KEY] || 1 : 1
   const currentIndex = queue[0]
   const current = currentIndex !== undefined ? items[currentIndex] : null
   const canSubmit = guess.trim().length > 0
 
   function persist(nextProgress) {
-    setProgress(nextProgress)
-    saveProgress(storageKey, nextProgress)
+    const newUnlocked = computeUnlockedTier(nextProgress, itemsByTier, maxTier)
+    const prevUnlocked = progressRef.current?.[UNLOCK_KEY] || 1
+    const withUnlock = { ...nextProgress, [UNLOCK_KEY]: newUnlocked }
+    if (newUnlocked > prevUnlocked) {
+      setTierJustUnlocked(newUnlocked)
+    }
+    setProgress(withUnlock)
+    saveProgress(storageKey, withUnlock)
+    return withUnlock
   }
 
   function handleCheck() {
@@ -97,7 +141,7 @@ export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
     const key = current.country
     const entry = progressRef.current[key] || makeInitialEntry()
     const updated = applyAnswer(entry, finalCorrect)
-    persist({ ...progressRef.current, [key]: updated })
+    const nextProgress = persist({ ...progressRef.current, [key]: updated })
 
     const rest = queue.slice(1)
     let nextQueue
@@ -107,6 +151,17 @@ export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
       const insertAt = Math.min(rest.length, REQUEUE_OFFSET)
       nextQueue = [...rest.slice(0, insertAt), currentIndex, ...rest.slice(insertAt)]
     }
+    // Falls sich gerade eine neue Stufe freigeschaltet hat, deren Karten mit einmischen.
+    const refreshedUnlocked = nextProgress[UNLOCK_KEY] || 1
+    if (refreshedUnlocked > unlockedTier) {
+      const newlyUnlocked = shuffle(
+        items
+          .map((item, i) => [item, i])
+          .filter(([item]) => (item.difficulty || 1) === refreshedUnlocked)
+          .map(([, i]) => i),
+      ).slice(0, NEW_CARDS_PER_SESSION)
+      nextQueue = [...nextQueue, ...newlyUnlocked]
+    }
     setQueue(nextQueue)
     setSessionDone((n) => n + (finalCorrect ? 1 : 0))
     setStage('ask')
@@ -115,9 +170,13 @@ export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
 
   function startNewSession() {
     setSessionDone(0)
-    setQueue(buildQueue(items, progressRef.current))
+    setQueue(buildQueue(items, progressRef.current, unlockedTier))
     setStage('ask')
     setGuess('')
+  }
+
+  function dismissTierUnlock() {
+    setTierJustUnlocked(null)
   }
 
   return {
@@ -132,6 +191,10 @@ export function useQuizEngine({ storageKey, items, getAnswer, getAliases }) {
     setWasCorrect,
     canSubmit,
     sessionDone,
+    unlockedTier,
+    maxTier,
+    tierJustUnlocked,
+    dismissTierUnlock,
     handleCheck,
     handleDontKnow,
     handleContinue,

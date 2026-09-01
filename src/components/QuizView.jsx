@@ -1,3 +1,8 @@
+import { useEffect } from 'react'
+
+const TIER_LABELS = { 1: 'Stufe 1', 2: 'Stufe 2', 3: 'Stufe 3', 4: 'Stufe 4' }
+const TIER_CLASSES = { 1: 'tier-1', 2: 'tier-2', 3: 'tier-3', 4: 'tier-4' }
+
 // Stellt eine Lernrunde (Frage -> Eingabe -> Bewertung -> Auflösung) dar.
 // Die konkreten Inhalte (Frage, Antwort, Zusatzinfos) kommen als Render-Props,
 // damit derselbe Ablauf für mehrere Quiz-Modi (Hauptstädte, Flaggen, ...)
@@ -23,11 +28,21 @@ export default function QuizView({
     setWasCorrect,
     canSubmit,
     sessionDone,
+    unlockedTier,
+    maxTier,
+    tierJustUnlocked,
+    dismissTierUnlock,
     handleCheck,
     handleDontKnow,
     handleContinue,
     startNewSession,
   } = engine
+
+  useEffect(() => {
+    if (tierJustUnlocked == null) return undefined
+    const timer = setTimeout(dismissTierUnlock, 3500)
+    return () => clearTimeout(timer)
+  }, [tierJustUnlocked, dismissTierUnlock])
 
   if (!stats) {
     return <div className="center-message">Lade Fortschritt…</div>
@@ -54,6 +69,24 @@ export default function QuizView({
         </div>
       </header>
 
+      <div className="tier-progress">
+        {Array.from({ length: maxTier }, (_, i) => i + 1).map((tier) => (
+          <span
+            key={tier}
+            className={`tier-dot ${TIER_CLASSES[tier]} ${tier <= unlockedTier ? 'is-unlocked' : 'is-locked'}`}
+          />
+        ))}
+        <span className="tier-progress-label">
+          {TIER_LABELS[unlockedTier]} von {maxTier} freigeschaltet
+        </span>
+      </div>
+
+      {tierJustUnlocked != null && (
+        <div className="tier-toast" onClick={dismissTierUnlock}>
+          🎉 {TIER_LABELS[tierJustUnlocked]} freigeschaltet!
+        </div>
+      )}
+
       <main className="card-area">
         {!current ? (
           <div className="card center-message">
@@ -63,6 +96,13 @@ export default function QuizView({
           </div>
         ) : (
           <div className="card" key={current.country}>
+            <div className="card-tags">
+              <span className="region-tag">{current.region}</span>
+              <span className={`difficulty-tag ${TIER_CLASSES[current.difficulty || 1]}`}>
+                {TIER_LABELS[current.difficulty || 1]}
+              </span>
+            </div>
+
             {stage === 'ask' && (
               <>
                 {renderQuestion(current)}
