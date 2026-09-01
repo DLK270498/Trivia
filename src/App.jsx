@@ -32,8 +32,8 @@ export default function App() {
           engine={capitalsEngine}
           promptText="Wie heißt die Hauptstadt?"
           inputPlaceholder="Deine Antwort"
-          emptyTitle="Für jetzt fertig 🎉"
-          emptyText="Aktuell ist keine Hauptstadt fällig. Schau später wieder vorbei, oder starte eine neue Runde."
+          emptyTitle="Runde geschafft 🎉"
+          emptyText="Starte einfach eine neue Runde, um weiterzuüben - auch mehrmals am Tag."
           renderQuestion={(item) => <h1>{item.country}</h1>}
           renderRevealAnswer={(item) => (
             <p className="capital-answer">{item.capital}</p>
@@ -53,8 +53,8 @@ export default function App() {
           engine={flagsEngine}
           promptText="Welches Land ist das?"
           inputPlaceholder="Land eingeben"
-          emptyTitle="Für jetzt fertig 🎉"
-          emptyText="Aktuell ist keine Flagge fällig. Schau später wieder vorbei, oder starte eine neue Runde."
+          emptyTitle="Runde geschafft 🎉"
+          emptyText="Starte einfach eine neue Runde, um weiterzuüben - auch mehrmals am Tag."
           renderQuestion={(item) => <div className="flag-display">{flagEmoji(item.code)}</div>}
           renderRevealAnswer={(item) => (
             <p className="capital-answer">{item.country}</p>

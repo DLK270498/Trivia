@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { applyAnswer, isDue, isMastered, isNew, makeInitialEntry } from './leitner.js'
+import { applyAnswer, hasUnlockCredit, isDue, isMastered, isNew, makeInitialEntry } from './leitner.js'
 import { loadProgress, saveProgress } from './api.js'
 import { isFuzzyMatch } from './match.js'
 
@@ -26,18 +26,18 @@ function groupByTier(items) {
   return map
 }
 
-// Eine Stufe gilt als gemeistert, wenn jedes ihrer Länder im Leitner-System
-// den Status "gelernt" erreicht hat. Erst dann schaltet sich die nächste
-// Schwierigkeitsstufe frei - und das dauerhaft, auch wenn später mal eine
-// Karte wieder falsch beantwortet wird.
+// Eine Stufe schaltet sich frei, sobald jedes ihrer Länder mindestens einmal
+// richtig beantwortet wurde (siehe hasUnlockCredit) - bewusst unabhängig vom
+// langsamen, tage-basierten Box-Fortschritt, damit sich eine Stufe an einem
+// Tag durcharbeiten lässt. Einmal freigeschaltet, bleibt es das dauerhaft.
 function computeUnlockedTier(progress, itemsByTier, maxTier) {
   let unlocked = Math.max(1, progress[UNLOCK_KEY] || 1)
   while (unlocked < maxTier) {
     const tierItems = itemsByTier.get(unlocked) || []
-    const allMastered =
+    const allUnlockCredit =
       tierItems.length > 0 &&
-      tierItems.every((item) => isMastered(progress[item.country] || makeInitialEntry()))
-    if (!allMastered) break
+      tierItems.every((item) => hasUnlockCredit(progress[item.country] || makeInitialEntry()))
+    if (!allUnlockCredit) break
     unlocked += 1
   }
   return unlocked
@@ -47,9 +47,11 @@ function buildQueue(items, progress, unlockedTier) {
   const now = Date.now()
   const due = []
   const fresh = []
+  const unlockedPool = []
 
   items.forEach((item, i) => {
     if ((item.difficulty || 1) > unlockedTier) return
+    unlockedPool.push(i)
     const entry = progress[item.country] || makeInitialEntry()
     if (isNew(entry)) {
       fresh.push(i)
@@ -59,7 +61,16 @@ function buildQueue(items, progress, unlockedTier) {
   })
 
   const newSlice = shuffle(fresh).slice(0, NEW_CARDS_PER_SESSION)
-  return shuffle([...due, ...newSlice])
+  const queue = shuffle([...due, ...newSlice])
+
+  // Wenn gerade nichts neu oder fällig ist, trotzdem eine Übungsrunde aus
+  // bereits gesehenen (freigeschalteten) Ländern anbieten, statt den Nutzer
+  // hängen zu lassen - Spaced Repetition soll nicht am mehrfachen Üben pro
+  // Tag hindern.
+  if (queue.length === 0 && unlockedPool.length > 0) {
+    return shuffle(unlockedPool).slice(0, NEW_CARDS_PER_SESSION)
+  }
+  return queue
 }
 
 // Generischer Lern-Motor (Leitner-Wiederholung, Schwierigkeitsstufen-Freischaltung
