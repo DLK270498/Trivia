@@ -46,22 +46,33 @@ function computeUnlockedTier(progress, itemsByTier, maxTier) {
 function buildQueue(items, progress, unlockedTier) {
   const now = Date.now()
   const due = []
-  const fresh = []
+  const freshByTier = new Map()
   const unlockedPool = []
 
   items.forEach((item, i) => {
-    if ((item.difficulty || 1) > unlockedTier) return
+    const tier = item.difficulty || 1
+    if (tier > unlockedTier) return
     unlockedPool.push(i)
     const entry = progress[item.country] || makeInitialEntry()
     if (isNew(entry)) {
-      fresh.push(i)
+      if (!freshByTier.has(tier)) freshByTier.set(tier, [])
+      freshByTier.get(tier).push(i)
     } else if (isDue(entry, now)) {
       due.push(i)
     }
   })
 
-  const newSlice = shuffle(fresh).slice(0, NEW_CARDS_PER_SESSION)
-  const queue = shuffle([...due, ...newSlice])
+  // Neue Karten stufenweise auffüllen: erst die niedrigste, noch nicht
+  // durchgearbeitete Stufe ausschöpfen, bevor höhere Stufen dazukommen -
+  // sonst würden die vielen Karten einer größeren, frisch freigeschalteten
+  // Stufe die letzten übrigen Karten der vorherigen Stufe einfach verdrängen.
+  const freshSlice = []
+  for (let tier = 1; tier <= unlockedTier && freshSlice.length < NEW_CARDS_PER_SESSION; tier++) {
+    const pool = shuffle(freshByTier.get(tier) || [])
+    freshSlice.push(...pool.slice(0, NEW_CARDS_PER_SESSION - freshSlice.length))
+  }
+
+  const queue = shuffle([...due, ...freshSlice])
 
   // Wenn gerade nichts neu oder fällig ist, trotzdem eine Übungsrunde aus
   // bereits gesehenen (freigeschalteten) Ländern anbieten, statt den Nutzer
